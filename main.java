@@ -1,19 +1,24 @@
 public class main {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+
+        ValidAnagram solution = new ValidAnagram();
 
         // Test cases
-        int[] test1 = {1, 2, 3, 1};
-        int[] test2 = {1, 2, 3, 4};
-        int[] test3 = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
-        int[] test4 = {}; // Empty array
-        int[] test5 = {5}; // Single element
+        String s1 = "anagram";
+        String t1 = "nagaram";
 
-        // Test and print results
-        System.out.println("Test 1: " + solution.containsDuplicate(test1)); // Expected: true
-        System.out.println("Test 2: " + solution.containsDuplicate(test2)); // Expected: false
-        System.out.println("Test 3: " + solution.containsDuplicate(test3)); // Expected: true
-        System.out.println("Test 4: " + solution.containsDuplicate(test4)); // Expected: false
-        System.out.println("Test 5: " + solution.containsDuplicate(test5)); // Expected: false
+        // System.out.println(solution.sortString(t1));
+
+        String s2 = "rat";
+        String t2 = "car";
+
+        String s5 = "abcd";
+        String t5 = "dcbae"; // False, different lengths
+
+        // Print results
+        System.out.println("Test 1: " + solution.isAnagram(s1, t1)); // Expected: true
+        System.out.println("Test 2: " + solution.isAnagram(s2, t2)); // Expected: false
+        System.out.println("Test 5: " + solution.isAnagram(s5, t5)); // Expected: false
+    
     }
 }
