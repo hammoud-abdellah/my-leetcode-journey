@@ -1,16 +1,17 @@
 public class main {
     public static void main(String[] args) {
 
-        TwoSum solution = new TwoSum();
+        TopKFrequentElements solution = new TopKFrequentElements();
 
         // Test cases
-        int[] arr = {2,7,11,15};
-        int target = 9;
+        int[] nums = {1,1,1,1,2,2,3};
+        int k = 2;
 
-        // Call the twoSum method and store the result
-        int[] result = solution.twoSum(arr, target);
+        
+        int[] result = solution.topKFrequent(nums, k);
+        // solution.topKFrequent(nums, k);
         
         // Print results (indexes of the two numbers that add up to the target)
-        System.out.println("Test 1: Indices = [" + result[0] + ", " + result[1] + "]");
+        // System.out.println("Test 1: Indices = [" + result[0] + ", " + result[1] + "]");
     }
 }
