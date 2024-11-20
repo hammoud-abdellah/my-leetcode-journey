@@ -1,18 +1,18 @@
 
 
-import Stack.MinStack;
+import java.util.Arrays;
+
+import Stack.EvaluateReversePolishNotation;
+
 
 public class main {
     public static void main(String[] args) {
 
-        MinStack minStack = new MinStack();
+        EvaluateReversePolishNotation solution = new EvaluateReversePolishNotation();
 
-        minStack.push(-2);
-        minStack.push(0);
-        minStack.push(-3);
-        System.out.println(minStack.getMin()); // Output: -3
-        minStack.pop();
-        System.out.println(minStack.top());    // Output: 0
-        System.out.println(minStack.getMin()); // Output: -2
+        String[] tokens = {"2","1","+","3","*"};
+        // System.out.println(!Arrays.asList(tokens).contains("2"));
+        System.out.println(solution.evalRPN(tokens));
+
     }
 }
