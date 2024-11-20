@@ -1,16 +1,18 @@
-import java.util.Map;
+
+
+import Stack.MinStack;
 
 public class main {
     public static void main(String[] args) {
 
-        // TopKFrequentElements solution = new TopKFrequentElements();
+        MinStack minStack = new MinStack();
 
-        // Test cases
-        int[] nums = {1,1,1,1,2,2,3};
-        int k = 2;
-        
-        Map<Character, Character> pairs = Map.of(')', '(', '}', '{', ']', '[');
-        // Print results (indexes of the two numbers that add up to the target)
-        System.out.println(pairs);
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        System.out.println(minStack.getMin()); // Output: -3
+        minStack.pop();
+        System.out.println(minStack.top());    // Output: 0
+        System.out.println(minStack.getMin()); // Output: -2
     }
 }
